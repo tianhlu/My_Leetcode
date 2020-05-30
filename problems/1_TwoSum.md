@@ -24,22 +24,20 @@ The easiest solution to come up with is Brute Force. We could write two for-loop
  - Less time by more space. Reduce the time complexity from O(N) to O(1)
 
  ## Code
-  - Support Language: JS
+  - Support Language: Java
 
-```js
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
-const twoSum = function (nums, target) {
-    const map = new Map();
-    for (let i = 0; i < nums.length; i++) {
-        const diff = target - nums[i];
-        if (map.has(diff)) {
-            return [map.get(diff), i];
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer,Integer> map = new HashMap<>();
+        for (int i=0;i<nums.length;i++){
+            int complement = target - nums[i];
+            if (map.containsKey(complement)){
+                return new int[] {map.get(complement),i};
+            } 
+            map.put(nums[i],i);            
         }
-        map.set(nums[i], i);
+        throw new IllegalArgumentException("No two sum solution");
     }
 }
 ```
