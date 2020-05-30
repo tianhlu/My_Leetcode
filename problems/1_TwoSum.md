@@ -1,7 +1,7 @@
 ## Problem
 https://leetcode.com/problems/two-sum
 
-## Key Points
+## Related Topics
 ```Array``` ```Hash Table```
 
 ## Problem Description
