@@ -1,4 +1,4 @@
-# leetcode problems
+# Leetcode Problems
 
 This project works as a repository of leetcode problems.
 
